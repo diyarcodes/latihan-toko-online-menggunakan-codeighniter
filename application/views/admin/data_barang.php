@@ -1,6 +1,8 @@
 <div class="container-fluid">
     <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#tambah_barang"><i class="fas fa-plus fa-sm"></i> Tambah Barang</button>
 
+    <?= $this->session->flashdata('pesan'); ?>
+
     <table class="table table-bordered">
         <tr>
             <th>NO</th>
@@ -26,10 +28,14 @@
                 <div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div>
             </td>
             <td>
-                <div class="btn btn-success btn-sm"><i class="fas fa-edit"></i></div>
+                <a href="<?= base_url('admin/Data_barang/editBarang/') . $brg['id_brg']; ?>">
+                    <div class="btn btn-success btn-sm"><i class="fas fa-edit"></i></div>
+                </a>
             </td>
             <td>
-                <div class="btn btn-success btn-sm"><i class="fas fa-trash"></i></div>
+                <a href="<?= base_url('admin/Data_barang/hapusBarang/') . $brg['id_brg']; ?>">
+                    <div class="btn btn-success btn-sm"><i class="fas fa-trash"></i></div>
+                </a>
             </td>
         </tr>
         <?php endforeach; ?>
