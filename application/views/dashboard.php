@@ -35,7 +35,7 @@
                 <h5 class="card-title mb-1"><?= $brg['nama_brg']; ?></h5>
                 <small><?= $brg['keterangan']; ?></small><br>
                 <span class="badge badge-pill badge-success">Rp. <?= $brg['harga']; ?></span><br>
-                <a href="#" class="btn btn-sm btn-primary">Tambah Ke Keranjang</a>
+                <a href="<?= base_url('Dashboard/tambah_ke_keranjang/') . $brg['id_brg']; ?>" class="btn btn-sm btn-primary">Tambah Ke Keranjang</a>
                 <a href="#" class="btn btn-sm btn-success">Detail</a>
             </div>
         </div>

@@ -19,7 +19,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="<?= base_url('Dashboard'); ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -124,6 +124,20 @@
                         </li>
 
                         <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <div class="navbar">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <?=
+                                        $keranjang = 'Keranjang Belanja: ' . $this->cart->total_items() . 'items'
+                                    ?>
+
+                                    <?=
+                                        $keranjang;
+                                    ?>
+                                </li>
+                            </ul>
+                        </div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
