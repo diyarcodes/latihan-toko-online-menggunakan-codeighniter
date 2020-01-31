@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('Toko_model');
+$autoload['model'] = array('Toko_model', 'Invoice_model');
