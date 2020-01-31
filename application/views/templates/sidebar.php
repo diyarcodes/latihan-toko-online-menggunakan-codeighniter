@@ -132,9 +132,7 @@
                                         $keranjang = 'Keranjang Belanja: ' . $this->cart->total_items() . 'items'
                                     ?>
 
-                                    <?=
-                                        $keranjang;
-                                    ?>
+                                    <a href="<?= base_url('Dashboard/detail_keranjang'); ?>">Keranjang</a>
                                 </li>
                             </ul>
                         </div>
