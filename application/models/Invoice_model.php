@@ -14,8 +14,7 @@ class Invoice_model extends CI_Model
             'batas_bayar' => date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 1, date('Y')))
         ];
 
-        $this->db->set($data);
-        $this->db->insert('tb_invoice');
+        $this->db->insert('tb_invoice', $data);
         $id_invoice = $this->db->insert_id();
 
         foreach ($this->cart->contents() as $item) {

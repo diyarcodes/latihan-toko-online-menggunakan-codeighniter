@@ -71,4 +71,15 @@ class Dashboard extends CI_Controller
             echo "Maaf, Pesanan Anda Gagal Diproses";
         }
     }
+
+    public function detail_barang($id)
+    {
+        $data['judul'] = 'Detail Barang';
+        $data['barang'] = $this->Toko_model->getAllBarangById($id);
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar');
+        $this->load->view('detail_barang');
+        $this->load->view('templates/footer');
+    }
 }

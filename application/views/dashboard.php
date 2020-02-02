@@ -36,7 +36,7 @@
                 <small><?= $brg['keterangan']; ?></small><br>
                 <span class="badge badge-pill badge-success">Rp. <?= number_format($brg['harga'], 0, ',', '.'); ?></span><br>
                 <a href="<?= base_url('Dashboard/tambah_ke_keranjang/') . $brg['id_brg']; ?>" class="btn btn-sm btn-primary">Tambah Ke Keranjang</a>
-                <a href="#" class="btn btn-sm btn-success">Detail</a>
+                <a href="<?= base_url('Dashboard/detail_barang/') . $brg['id_brg']; ?>" class="btn btn-sm btn-success">Detail</a>
             </div>
         </div>
         <?php endforeach; ?>
