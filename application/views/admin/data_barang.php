@@ -63,7 +63,13 @@
                         </div>
                         <div class="form-group">
                             <label for="">kategori</label>
-                            <input type="text" name="kategori" class="form-control">
+                            <select name="kategori" id="" class="form-control" name="kategori">
+                                <option value="Elektronik">Elektronik</option>
+                                <option value="Pakaian Pria">Pakaian Pria</option>
+                                <option value="Pakaian Wanita">Pakaian Wanita</option>
+                                <option value="Pakaian Anak-anak">Pakaian Anak-anak</option>
+                                <option value="Peralatan Olahraga">Peralatan Olahraga</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="">Harga</label>

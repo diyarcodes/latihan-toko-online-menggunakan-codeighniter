@@ -13,7 +13,7 @@ class Toko_model extends CI_Model
 		$data = [
 			'nama_brg' => htmlspecialchars($this->input->post('nama_brg')),
 			'keterangan' => htmlspecialchars($this->input->post('keterangan')),
-			'kategori' => htmlspecialchars($this->input->post('kategori')),
+			'kategori' => $this->input->post('kategori'),
 			'harga' => htmlspecialchars($this->input->post('harga')),
 			'stok' => htmlspecialchars($this->input->post('stok')),
 			'gambar' => $this->_uploadGambar()
