@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Feb 2020 pada 05.16
+-- Waktu pembuatan: 02 Feb 2020 pada 08.22
 -- Versi server: 10.1.38-MariaDB
 -- Versi PHP: 7.3.2
 
@@ -129,6 +129,28 @@ END
 $$
 DELIMITER ;
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_user`
+--
+
+CREATE TABLE `tb_user` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `role_id` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tb_user`
+--
+
+INSERT INTO `tb_user` (`id`, `nama`, `username`, `password`, `role_id`) VALUES
+(1, 'admin', 'admin', '123', 1),
+(3, 'Ahmad Mishbakhud Diyar', 'diyar', '$2y$10$xEerjAp/EiFY8T9WYPFqROyXs2IQm8RjXbiF.zTmrAJ', 2);
+
 --
 -- Indexes for dumped tables
 --
@@ -152,6 +174,12 @@ ALTER TABLE `tb_pesanan`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `tb_user`
+--
+ALTER TABLE `tb_user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
@@ -172,6 +200,12 @@ ALTER TABLE `tb_invoice`
 --
 ALTER TABLE `tb_pesanan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_user`
+--
+ALTER TABLE `tb_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
