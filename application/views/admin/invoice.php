@@ -19,7 +19,9 @@
             <td><?= $inv['tgl_pesan']; ?></td>
             <td><?= $inv['batas_bayar']; ?></td>
             <td>
-                <div class="btn btn-sm btn-primary">Detail</div>
+                <a href="<?= base_url('admin/Invoice/detail/') . $inv['id']; ?>">
+                    <div class="btn btn-sm btn-primary">Detail</div>
+                </a>
             </td>
         </tr>
         <?php endforeach; ?>

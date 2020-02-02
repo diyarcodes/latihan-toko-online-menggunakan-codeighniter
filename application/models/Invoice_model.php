@@ -37,4 +37,14 @@ class Invoice_model extends CI_Model
     {
         return $this->db->get('tb_invoice')->result_array();
     }
+
+    public function getAllDataByIDInvoice($id_invoice)
+    {
+        return $this->db->get_where('tb_invoice', ['id' => $id_invoice])->row_array();
+    }
+
+    public function getAllDataByIDPesanan($id_invoice)
+    {
+        return $this->db->get_where('tb_pesanan', ['id_invoice' => $id_invoice])->result_array();
+    }
 }
